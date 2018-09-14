@@ -1,0 +1,13 @@
+{
+  "name": "IPFSNative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "postinstall": "sed -i '' 's/#import <RCTAnimation\\/RCTValueAnimatedNode.h>/#import \"RCTValueAnimatedNode.h\"/' ./node_modules/react-native/Libraries/NativeAnimation/RCTNativeAnimatedNodesManager.h",
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react": "16.5.0",
+    "react-native": "^0.57.0"
+  }
+}
