@@ -6,8 +6,22 @@
 //  Copyright © 2018 com.nz.IPFS. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import IPFSClient
 
-class Upload: NSObject {
-
+@objc(Upload)
+public class Upload: NSObject {
+    
+    static let hashKey = "hashKey"
+    static let contentKey = "contentKey"
+    
+    @objc func uploadFileWithCallBack( _ callback: @escaping RCTResponseSenderBlock) {
+        DispatchQueue.main.async {
+            let client = IPFSClient()
+            client.add() { (hash, content) in
+                let callbackInfo = [Upload.hashKey: hash, Upload.contentKey: content]
+                callback([callbackInfo])
+            }
+        }
+    }
 }

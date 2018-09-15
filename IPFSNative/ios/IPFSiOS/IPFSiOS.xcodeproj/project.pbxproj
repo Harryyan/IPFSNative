@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356F2E324B29134A644E4B04 /* Pods_IPFSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58189A0FD712F5D145A33E8D /* Pods_IPFSiOS.framework */; };
 		F85C00E8214CD1FF00D98352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C00E7214CD1FF00D98352 /* AppDelegate.swift */; };
 		F85C00EA214CD1FF00D98352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C00E9214CD1FF00D98352 /* ViewController.swift */; };
 		F85C00ED214CD1FF00D98352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85C00EB214CD1FF00D98352 /* Main.storyboard */; };
 		F85C00EF214CD20000D98352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85C00EE214CD20000D98352 /* Assets.xcassets */; };
 		F85C00F2214CD20000D98352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85C00F0214CD20000D98352 /* LaunchScreen.storyboard */; };
+		F85C00FD214CD3D200D98352 /* SwiftReactNativeBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F85C00FC214CD3D200D98352 /* SwiftReactNativeBridge.m */; };
+		F85C0108214CFFAB00D98352 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C0107214CFFAB00D98352 /* Upload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58189A0FD712F5D145A33E8D /* Pods_IPFSiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPFSiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA720B70721F6134CDE4345E /* Pods-IPFSiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPFSiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IPFSiOS/Pods-IPFSiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F85C00E4214CD1FF00D98352 /* IPFSiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFSiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85C00E7214CD1FF00D98352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F85C00E9214CD1FF00D98352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,10 @@
 		F85C00EE214CD20000D98352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F85C00F1214CD20000D98352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F85C00F3214CD20000D98352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85C00FA214CD3D200D98352 /* IPFSiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPFSiOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		F85C00FC214CD3D200D98352 /* SwiftReactNativeBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftReactNativeBridge.m; sourceTree = "<group>"; };
+		F85C0107214CFFAB00D98352 /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		FC6E50D11EBFE36CCD771B4F /* Pods-IPFSiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPFSiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-IPFSiOS/Pods-IPFSiOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356F2E324B29134A644E4B04 /* Pods_IPFSiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B728CC848D9243A7AFAF8B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA720B70721F6134CDE4345E /* Pods-IPFSiOS.debug.xcconfig */,
+				FC6E50D11EBFE36CCD771B4F /* Pods-IPFSiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E68E281643EBD953EC74546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58189A0FD712F5D145A33E8D /* Pods_IPFSiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F85C00DB214CD1FF00D98352 = {
 			isa = PBXGroup;
 			children = (
 				F85C00E6214CD1FF00D98352 /* IPFSiOS */,
 				F85C00E5214CD1FF00D98352 /* Products */,
+				3B728CC848D9243A7AFAF8B2 /* Pods */,
+				6E68E281643EBD953EC74546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +83,7 @@
 		F85C00E6214CD1FF00D98352 /* IPFSiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F85C00F9214CD3C300D98352 /* NativeModule */,
 				F85C00E7214CD1FF00D98352 /* AppDelegate.swift */,
 				F85C00E9214CD1FF00D98352 /* ViewController.swift */,
 				F85C00EB214CD1FF00D98352 /* Main.storyboard */,
@@ -64,6 +94,16 @@
 			path = IPFSiOS;
 			sourceTree = "<group>";
 		};
+		F85C00F9214CD3C300D98352 /* NativeModule */ = {
+			isa = PBXGroup;
+			children = (
+				F85C00FC214CD3D200D98352 /* SwiftReactNativeBridge.m */,
+				F85C00FA214CD3D200D98352 /* IPFSiOS-Bridging-Header.h */,
+				F85C0107214CFFAB00D98352 /* Upload.swift */,
+			);
+			path = NativeModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F85C00F6214CD20000D98352 /* Build configuration list for PBXNativeTarget "IPFSiOS" */;
 			buildPhases = (
+				A42731F8876718BB5A0D3CD8 /* [CP] Check Pods Manifest.lock */,
 				F85C00E0214CD1FF00D98352 /* Sources */,
 				F85C00E1214CD1FF00D98352 /* Frameworks */,
 				F85C00E2214CD1FF00D98352 /* Resources */,
+				4658AD9A20068CDDE36B1D36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +138,7 @@
 				TargetAttributes = {
 					F85C00E3214CD1FF00D98352 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,13 +173,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4658AD9A20068CDDE36B1D36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IPFSiOS/Pods-IPFSiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/yoga/yoga.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IPFSiOS/Pods-IPFSiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A42731F8876718BB5A0D3CD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IPFSiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F85C00E0214CD1FF00D98352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85C0108214CFFAB00D98352 /* Upload.swift in Sources */,
 				F85C00EA214CD1FF00D98352 /* ViewController.swift in Sources */,
 				F85C00E8214CD1FF00D98352 /* AppDelegate.swift in Sources */,
+				F85C00FD214CD3D200D98352 /* SwiftReactNativeBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,16 +370,21 @@
 		};
 		F85C00F7214CD20000D98352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA720B70721F6134CDE4345E /* Pods-IPFSiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IPFSiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nz.harry.IPFSiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IPFSiOS/NativeModule/IPFSiOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,16 +392,20 @@
 		};
 		F85C00F8214CD20000D98352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC6E50D11EBFE36CCD771B4F /* Pods-IPFSiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IPFSiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nz.harry.IPFSiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IPFSiOS/NativeModule/IPFSiOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
