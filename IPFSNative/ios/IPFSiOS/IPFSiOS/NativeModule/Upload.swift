@@ -2,7 +2,7 @@
 //  Upload.swift
 //  IPFSiOS
 //
-//  Created by DearLan on 15/09/18.
+//  Created by Harry on 15/09/18.
 //  Copyright © 2018 com.nz.IPFS. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ public class Upload: NSObject {
     static let hashKey = "hashKey"
     static let contentKey = "contentKey"
     
-    @objc func uploadFileWithCallBack( _ callback: @escaping RCTResponseSenderBlock) {
+    @objc func uploadFile(callback: @escaping RCTResponseSenderBlock) {
         DispatchQueue.main.async {
             let client = IPFSClient()
             client.add() { (hash, content) in

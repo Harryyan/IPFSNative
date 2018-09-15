@@ -97,8 +97,8 @@
 		F85C00F9214CD3C300D98352 /* NativeModule */ = {
 			isa = PBXGroup;
 			children = (
-				F85C00FC214CD3D200D98352 /* SwiftReactNativeBridge.m */,
 				F85C00FA214CD3D200D98352 /* IPFSiOS-Bridging-Header.h */,
+				F85C00FC214CD3D200D98352 /* SwiftReactNativeBridge.m */,
 				F85C0107214CFFAB00D98352 /* Upload.swift */,
 			);
 			path = NativeModule;

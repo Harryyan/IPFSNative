@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  IPFSiOS
 //
-//  Created by DearLan on 15/09/18.
+//  Created by Harry on 15/09/18.
 //  Copyright © 2018 com.nz.IPFS. All rights reserved.
 //
 
