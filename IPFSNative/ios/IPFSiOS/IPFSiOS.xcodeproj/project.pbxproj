@@ -32,6 +32,8 @@
 		F87C9AC0214D1F0B009967AA /* SwiftMultihash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F87C9AA4214D1E7F009967AA /* SwiftMultihash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F87C9AC1214D1F0B009967AA /* VarInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87C9AA1214D1E7F009967AA /* VarInt.framework */; };
 		F87C9AC2214D1F0B009967AA /* VarInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F87C9AA1214D1E7F009967AA /* VarInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F87C9AC4214DC441009967AA /* IPFSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87C9AC3214DC441009967AA /* IPFSClient.framework */; };
+		F87C9AC5214DC441009967AA /* IPFSClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F87C9AC3214DC441009967AA /* IPFSClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +46,7 @@
 				F87C9ABC214D1F0B009967AA /* SwiftIpfsApi.framework in Embed Frameworks */,
 				F87C9AB4214D1F0B009967AA /* IPFSClient.framework in Embed Frameworks */,
 				F87C9AC2214D1F0B009967AA /* VarInt.framework in Embed Frameworks */,
+				F87C9AC5214DC441009967AA /* IPFSClient.framework in Embed Frameworks */,
 				F87C9AB8214D1F0B009967AA /* SwiftGMP.framework in Embed Frameworks */,
 				F87C9ABA214D1F0B009967AA /* SwiftHex.framework in Embed Frameworks */,
 				F87C9AAF214D1EDA009967AA /* Pods_IPFSiOS.framework in Embed Frameworks */,
@@ -77,6 +80,7 @@
 		F87C9AA3214D1E7F009967AA /* SwiftMultiaddr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultiaddr.framework; path = IPFSClient/Carthage/Build/iOS/SwiftMultiaddr.framework; sourceTree = "<group>"; };
 		F87C9AA4214D1E7F009967AA /* SwiftMultihash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultihash.framework; path = IPFSClient/Carthage/Build/iOS/SwiftMultihash.framework; sourceTree = "<group>"; };
 		F87C9AAC214D1E90009967AA /* IPFSClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IPFSClient.framework; path = IPFSClient/Products/IPFSClient.framework; sourceTree = "<group>"; };
+		F87C9AC3214DC441009967AA /* IPFSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IPFSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6E50D11EBFE36CCD771B4F /* Pods-IPFSiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPFSiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-IPFSiOS/Pods-IPFSiOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,7 @@
 				F87C9ABB214D1F0B009967AA /* SwiftIpfsApi.framework in Frameworks */,
 				F87C9AB3214D1F0B009967AA /* IPFSClient.framework in Frameworks */,
 				F87C9AC1214D1F0B009967AA /* VarInt.framework in Frameworks */,
+				F87C9AC4214DC441009967AA /* IPFSClient.framework in Frameworks */,
 				F87C9AB7214D1F0B009967AA /* SwiftGMP.framework in Frameworks */,
 				F87C9AB9214D1F0B009967AA /* SwiftHex.framework in Frameworks */,
 				F826F74E214D130B006E9E4C /* Pods_IPFSiOS.framework in Frameworks */,
@@ -128,6 +133,7 @@
 		F85C00DB214CD1FF00D98352 = {
 			isa = PBXGroup;
 			children = (
+				F87C9AC3214DC441009967AA /* IPFSClient.framework */,
 				F85C00E6214CD1FF00D98352 /* IPFSiOS */,
 				F85C00E5214CD1FF00D98352 /* Products */,
 				3B728CC848D9243A7AFAF8B2 /* Pods */,

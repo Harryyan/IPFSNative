@@ -23,11 +23,9 @@ public final class IPFSClient: NSObject {
                     "creating peer-to-peer (P2P) connections and providing an efficient way for users to interact and exchange" +
                     "data confidentially over the network. The Sylo Protocol consists of client-side APIs and services that allow" +
                     "Connected Applications to confidentially perform communication functions with other users on the network." +
-                    "Sylo Signalling will be a decentralised service run by resources on the Sylo Network. Sylo Signalling will" +
+                    "\n\nSylo Signalling will be a decentralised service run by resources on the Sylo Network. Sylo Signalling will" +
                     "provide the ability for peers to connect and is used to send messages and connectivity requests to enable reliable" +
                     "communication. Sylo Signalling Nodes will be remunerated in SYLOs in exchange for providing this service to the network."
-        
-        var hash: String?
         var content: String?
         
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
