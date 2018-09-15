@@ -13,8 +13,8 @@ class IPFSClient(private val context: Context) {
                 it.cancel(true)
                 it.shouldCancel = true
             }
-
-            dataTask = DataTask(context.filesDir.path.toString(), callBack).apply { execute() }
         }
+
+        dataTask = DataTask(context.filesDir.path.toString(), callBack).apply { execute() }
     }
 }

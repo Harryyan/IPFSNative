@@ -36,8 +36,6 @@ class DataTask(private val filePath: String,
         val hashValue = apiClient.add.file(file, filename = "Text.txt").Hash
         val content = apiClient.get.cat(hashValue)
 
-        Thread.sleep(7000)
-
         return hashMapOf("hashKey" to hashValue, "contentKey" to content)
     }
 
