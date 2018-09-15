@@ -11,12 +11,12 @@ export default class Home extends React.Component {
       hashValue: "",
       content: ""
     };
-    
+
     this.state = this.initialState
   }
 
   componentDidMount() {
-    this.setState({ 
+    this.setState({
       shouldShowResult: false,
       hashValue: "",
       content: ""
@@ -33,7 +33,21 @@ export default class Home extends React.Component {
     //     });
     // })
 
-    NativeModules.UploadFileModule.uploadFileWithCallBack((success)=>{alert(success)},(error)=>{alert(error)})
+    NativeModules.UploadFileModule.uploadFileWithCallBack(
+      (data) => {
+        this.update(data.hash, data.content)
+      },
+      (error) => {
+        alert(error)
+      })
+  }
+
+  update(hash, content) {
+    this.setState({
+      shouldShowResult: true,
+      hashValue: hash,
+      content: content
+    });
   }
 
   render() {
@@ -41,17 +55,17 @@ export default class Home extends React.Component {
       <ScrollView style={styles.container}>
         <View style={styles.uploadArea}>
           <View style={styles.buttonContainer}>
-            <Button uppercase={false} onPress={() => this.onPressUpload()} title="Upload following file to IPFS" {...Platform.select({ios: {color:'#FFFFFF'}, android:{color:'#2E9298'}})}/>
+            <Button uppercase={false} onPress={() => this.onPressUpload()} title="Upload following file to IPFS" {...Platform.select({ ios: { color: '#FFFFFF' }, android: { color: '#2E9298' } })} />
           </View>
           <Text style={styles.fileTitle}>Test.txt</Text>
         </View>
         <View style={styles.resultArea}>
-          <Text style={{marginLeft: 16, fontSize: 18, textAlign: "left", color: this.state.shouldShowResult ? '#000000':'#ada8a8'}}>File hash on IPFS: </Text>
+          <Text style={{ marginLeft: 16, fontSize: 18, textAlign: "left", color: this.state.shouldShowResult ? '#000000' : '#ada8a8' }}>File hash on IPFS: </Text>
           <Text style={styles.hash}>{this.state.hashValue}</Text>
-          <Text style={{marginLeft: 16, fontSize: 18, textAlign: "left", color: this.state.shouldShowResult ? '#000000':'#ada8a8'}}>File content on IPFS: </Text>
+          <Text style={{ marginLeft: 16, fontSize: 18, textAlign: "left", color: this.state.shouldShowResult ? '#000000' : '#ada8a8' }}>File content on IPFS: </Text>
           <Text style={styles.content}>{this.state.content}</Text>
         </View>
-      </ScrollView> 
+      </ScrollView>
     );
   }
 }
@@ -71,12 +85,12 @@ const styles = StyleSheet.create({
       }
     }),
     justifyContent: 'center',
-    alignItems:'center',
+    alignItems: 'center',
     flex: 1
   },
   resultArea: {
     flex: 2,
-    alignItems:'flex-start',
+    alignItems: 'flex-start',
   },
   buttonContainer: {
     ...Platform.select({
