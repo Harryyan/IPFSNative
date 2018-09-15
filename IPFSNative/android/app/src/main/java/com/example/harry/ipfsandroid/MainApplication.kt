@@ -1,6 +1,7 @@
 package com.example.harry.ipfsandroid
 
 import android.app.Application
+import com.example.harry.nativemodules.UploadReactPackage
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
@@ -18,8 +19,8 @@ class MainApplication : Application(), ReactApplication {
 
         public override fun getPackages(): List<ReactPackage> {
             return Arrays.asList(
-                    MainReactPackage()
-//                    ToastReactPackage()
+                    MainReactPackage(),
+                    UploadReactPackage()
             )
         }
     }
