@@ -9,6 +9,7 @@
 import Foundation
 
 extension Data {
+    
     func bytes() -> [UInt8] {
         let count = self.count / MemoryLayout<UInt8>.size
         var bytesArray = [UInt8](repeating: 0, count: count)

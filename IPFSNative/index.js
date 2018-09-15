@@ -24,25 +24,23 @@ export default class Home extends React.Component {
   }
 
   onPressUpload() {
-    // NativeModules.Upload.uploadFileWithCallBack( 
-    //   (result) => {
-    //     this.setState({ 
-    //       shouldShowResult: true,
-    //       hashValue: result.hashKey,
-    //       content: result.contentKey
-    //     });
-    // })
-
-    NativeModules.UploadFileModule.uploadFileWithCallBack(
-      (data) => {
-        this.update(data.hash, data.content)
-      },
-      (error) => {
-        alert(error)
-      })
+    if (Platform.OS === 'ios') {
+      NativeModules.Upload.uploadFileWithCallBack(
+        (result) => {
+          this.updateData(result.hashKey, result.contentKey)
+        })
+    } else {
+      NativeModules.UploadFileModule.uploadFileWithCallBack(
+        (data) => {
+          this.updateData(data.hash, data.content)
+        },
+        (error) => {
+          alert(error)
+        })
+    }
   }
 
-  update(hash, content) {
+  updateData(hash, content) {
     this.setState({
       shouldShowResult: true,
       hashValue: hash,
@@ -55,7 +53,7 @@ export default class Home extends React.Component {
       <ScrollView style={styles.container}>
         <View style={styles.uploadArea}>
           <View style={styles.buttonContainer}>
-            <Button uppercase={false} onPress={() => this.onPressUpload()} title="Upload following file to IPFS" {...Platform.select({ ios: { color: '#FFFFFF' }, android: { color: '#2E9298' } })}/>
+            <Button uppercase={false} onPress={() => this.onPressUpload()} title="Upload following file to IPFS" {...Platform.select({ ios: { color: '#FFFFFF' }, android: { color: '#2E9298' } })} />
           </View>
           <Text style={styles.fileTitle}>Test.txt</Text>
         </View>

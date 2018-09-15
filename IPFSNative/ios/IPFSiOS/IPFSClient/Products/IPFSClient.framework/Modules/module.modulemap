@@ -1,0 +1,11 @@
+framework module IPFSClient {
+  umbrella header "IPFSClient.h"
+
+  export *
+  module * { export * }
+}
+
+module IPFSClient.Swift {
+    header "IPFSClient-Swift.h"
+    requires objc
+}

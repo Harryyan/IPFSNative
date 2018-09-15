@@ -1,6 +1,8 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '10.0'
 
+workspace 'IPFSiOS.xcworkspace'
+
 def react_pod 
   pod 'React', :path => '../../node_modules/react-native', :subspecs => [
     'Core',

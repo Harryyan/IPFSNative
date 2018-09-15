@@ -11,13 +11,21 @@ import SwiftIpfsApi
 
 public final class IPFSClient: NSObject {
     
+    public static let baseURL = "http://localhost:8081/index.bundle?platform=ios"
+    
     private let host = "127.0.0.1"
     private let port = 5001
     
     public func add(_ callBack: @escaping ((String?, String?) -> Void)) {
         let fileManager = FileManager.default
         let file = "Test.txt"
-        let text = "In a world of mindless browsing and intrusive advertising, Sylo puts you back in control of your own digital world. It’s a community of like minded people and businesses, who want full control over how they communicate and the information they share online." + "In a world of mindless browsing and intrusive advertising, Sylo puts you back in control of your own digital world. It’s a community of like minded people and businesses, who want full control over how they communicate and the information they share online."
+        let text = "The Sylo Protocol acts as the confidential networking layer for all integrated decentralised applications," +
+                    "creating peer-to-peer (P2P) connections and providing an efficient way for users to interact and exchange" +
+                    "data confidentially over the network. The Sylo Protocol consists of client-side APIs and services that allow" +
+                    "Connected Applications to confidentially perform communication functions with other users on the network." +
+                    "Sylo Signalling will be a decentralised service run by resources on the Sylo Network. Sylo Signalling will" +
+                    "provide the ability for peers to connect and is used to send messages and connectivity requests to enable reliable" +
+                    "communication. Sylo Signalling Nodes will be remunerated in SYLOs in exchange for providing this service to the network."
         
         var hash: String?
         var content: String?
@@ -33,17 +41,20 @@ public final class IPFSClient: NSObject {
             do {
                 try text.write(to: fileURL, atomically: false, encoding: .utf8)
             }
-            catch {/* error handling here */}
+            catch {
+                print("Unexpected error: \(error).")
+            }
+            
             do {
                 let path = fileURL.absoluteString
                 let api = try? IpfsApi(host: host, port: port)
                 try? api?.add(path, completionHandler: { nodes in
                     let multihash = nodes.first?.hash
-                    hash = nodes.first?.hash?.string()
+                    let hashString = nodes.first?.hash?.string()
                     try? api?.cat(multihash!, completionHandler: { (data) in
-                        let test = Data.withBytes(data)
-                        content = String(data: test, encoding: .utf8)
-                        callBack(hash, content)
+                        let data = Data.withBytes(data)
+                        content = String(data: data, encoding: .utf8)
+                        callBack(hashString, content)
                     })
                 })
             }
