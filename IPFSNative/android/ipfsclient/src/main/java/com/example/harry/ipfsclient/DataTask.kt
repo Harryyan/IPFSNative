@@ -11,6 +11,16 @@ class DataTask(private val filePath: String,
         AsyncTask<Void, Void, HashMap<String?, String?>>() {
 
     private val baseUrl = "http://10.0.2.2:5001/api/v0/"
+    private val fakeData = "The Sylo Protocol acts as the confidential networking layer for all " +
+            "integrated decentralised applications, creating peer-to-peer (P2P) connections and " +
+            "providing an efficient way for users to interact and exchange data confidentially " +
+            "over the network. The Sylo Protocol consists of client-side APIs and services that " +
+            "allow Connected Applications to confidentially perform communication functions with " +
+            "other users on the network. \n\nSylo Signalling will be a decentralised service run by " +
+            "resources on the Sylo Network. Sylo Signalling will provide the ability for peers " +
+            "to connect and is used to send messages and connectivity requests to enable reliable" +
+            " communication. Sylo Signalling Nodes will be remunerated in SYLOs in exchange " +
+            "for providing this service to the network."
 
     lateinit var file: File
 
@@ -22,12 +32,12 @@ class DataTask(private val filePath: String,
         val filePath = "$filePath/Test.txt"
         file = File(filePath)
         val isNewFileCreated: Boolean = file.createNewFile()
-        file.writeText("Hello world!")
+        file.writeText(fakeData)
 
         if (isNewFileCreated) {
-            println("test is created successfully.")
+            println("file is created successfully.")
         } else {
-            println("test already exists.")
+            println("file already exists.")
         }
     }
 
@@ -44,7 +54,6 @@ class DataTask(private val filePath: String,
 
         result?.let {
             if (!shouldCancel) {
-                Log.d("####", "post e")
                 callBack(result)
             }
         }

@@ -9,13 +9,14 @@ import java.lang.Exception
 class UploadFileModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
     private val mContext: Context
+    private val moduleName = "UploadFileModule"
 
     init {
         mContext = reactContext
     }
 
     override fun getName(): String {
-        return "UploadFileModule"
+        return moduleName
     }
 
     @ReactMethod

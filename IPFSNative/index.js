@@ -55,7 +55,7 @@ export default class Home extends React.Component {
       <ScrollView style={styles.container}>
         <View style={styles.uploadArea}>
           <View style={styles.buttonContainer}>
-            <Button uppercase={false} onPress={() => this.onPressUpload()} title="Upload following file to IPFS" {...Platform.select({ ios: { color: '#FFFFFF' }, android: { color: '#2E9298' } })} />
+            <Button uppercase={false} onPress={() => this.onPressUpload()} title="Upload following file to IPFS" {...Platform.select({ ios: { color: '#FFFFFF' }, android: { color: '#2E9298' } })}/>
           </View>
           <Text style={styles.fileTitle}>Test.txt</Text>
         </View>
