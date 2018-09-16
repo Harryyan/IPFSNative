@@ -16,20 +16,28 @@ Tips from [Harry](https://harryyan.iceloof.com/):
 >
 >  Similar issue happened to Android as well. When you add **ipfs-api-kotlin** dependency to gradle, please use following line: `implementation 'com.github.ligi:ipfs-api-kotlin:0.12'`, otherwise you can't install it. Don't forget to add Kotlin support in your module's gradle: `apply plugin: 'kotlin-android'`
 
-### How to run this project
+## How to run this project
 
 I don't checkin the **node_modules** folder to this repo, you need run `npm install` after you checkout this project.
 
 Next, run `npm start` to start a package, and then run `ipfs daemon` to start IPFS Api Server.
 
-Finally open Xcode or Android Studio and click **Run** button to launch the app.
+###iOS
 
->  You can also run `react-native run-ios` or `react-native run-android` to lauch the app after you start IPFS Api Server.
+I don't include Carthage Build folder into version control because of the big size. So you need to run `carthage update --platform iOS` to install all **swift-ipfs-api** frameworks under `IPFSNative/IPFSNative/ios/IPFSiOS/IPFSClient` path.
+
+Then open **IPFSiOS.xcworkspace** using Xcode(I'm using Xcode 9.4.1), choose `IPFSiOS` target and run it.
+
+###Android
+
+Open the project using Android Studio and click **Run** button to launch the app.
+
+>  You can also run `react-native run-ios` or `react-native run-android` to lauch the app after you start IPFS Api Server. However, I don't recommend this way, because you have to specify iOS project path.
 
 
-### ScreenShots
+## ScreenShots
 
-#### iOS
+### iOS
 
 <div style="text-align:center" markdown="1">
 	<img src="Resources/IPFSiOS_before.png" width=300 alt="Render" align=left />
@@ -38,13 +46,13 @@ Finally open Xcode or Android Studio and click **Run** button to launch the app.
 
 <br />
 
-#### Android
+### Android
 <div style="text-align:center" markdown="1">
 	<img src="Resources/IPFSAndroid_before.png" width=300 alt="Render" align=left />
 	<img src="Resources/IPFSAndroid_after.png" width=300 alt="Render" align=center />
 </div>
 
-### How to implement it
+## How to implement it
 
 The main idea is to create independent framework(*iOS*) and modules(*Android*) on native sides, which is easy to maintain, migrate and extend.
 
