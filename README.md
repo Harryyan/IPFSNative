@@ -32,19 +32,15 @@ Finally open Xcode or Android Studio IDE and click **Run** button to launch the 
 #### iOS
 
 <div style="text-align:center" markdown="1">
-  <p align="left">
-	<img src="Resources/IPFSiOS_before.png" width=300 alt="Render" align=center />
-  </p>
-  <p align="right">
+	<img src="Resources/IPFSiOS_before.png" width=300 alt="Render" align=left />
 	<img src="Resources/IPFSiOS_after.png" width=300 alt="Render" align=center />
-  </p>
 </div>
 
 <br />
 
 #### Android
 
-<img src="Resources/IPFSAndroid_before.png" width=300 alt="Render" align=center />
+<img src="Resources/IPFSAndroid_before.png" width=300 alt="Render" align=left />
 <img src="Resources/IPFSAndroid_after.png" width=300 alt="Render" align=center />
 
 ### How to implement it
