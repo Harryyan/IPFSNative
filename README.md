@@ -31,8 +31,10 @@ Finally open Xcode or Android Studio IDE and click **Run** button to launch the 
 
 #### iOS
 
-<img src="Resources/IPFSiOS_before.png" width=300 alt="Render" align=center />
-<img src="Resources/IPFSiOS_after.png" width=300 alt="Render" align=center />
+<div style="text-align:center" markdown="1">
+	<img src="Resources/IPFSiOS_before.png" width=300 alt="Render" align=center />
+	<img src="Resources/IPFSiOS_after.png" width=300 alt="Render" align=center />
+</div>
 
 <br />
 
@@ -46,14 +48,17 @@ Finally open Xcode or Android Studio IDE and click **Run** button to launch the 
 The main idea is to create independent framework(*iOS*) and modules(*Android*) on native side, which is easy to maintain, migrate and extend.
 
 Following is the iOS project hierarchy:
-
-<img src="Resources/project_iOS.png" width=300 alt="Render" align=center />
+<p align="center">
+	<img src="Resources/project_iOS.png" width=300 alt="Render" align=center />
+</p>
 
 I created an **IPFSClient** framework, and add it to the main target called **IPFSiOS**. The main target doesn't need to know how to upload and fetch data from IPFS Api Server, it just cares about the response, and pass it to React Native page(*NativeModule* does it). Using this way, we can easily separate bussiness logic and UI logic, and easy to add more IPFS commands support without affecting other targets, also quite easy when migrating.
 
 Android project has one more module called **nativemodules**(*communicate with IPFSClient*). Because the communication setup between android and react native is more complicated than iOS, which needs more classes such as **UploadFileModule**, **UploadReactPackage**, and **MainApplication**. In this way, we can not only separate **IPFSClient** module, but also separate native service components, which means we can maintain this module as a SDK, and apply it to different projects.
 
-<img src="Resources/project_android.png" width=300 alt="Render" align=center />
+<p align="center">
+	<img src="Resources/project_android.png" width=300 alt="Render" align=center />
+</p>
 
 
 # Issues I found:
