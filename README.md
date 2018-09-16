@@ -77,7 +77,7 @@ Also there are big differences between Swfit and Kotlin IPFS Api Library. For in
 
 `ipfs file ls /ipfs/QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa`
 
-However, there is no such functionality in Android Library. 
+However, there is no such functionality in Android Library. And the file hash string values returned from their API are also different, you can see the difference on the screenshots.
 
 The both libraries don't provide error handling callback either. For example, we can't get any status when server not running or breaks down.
 
