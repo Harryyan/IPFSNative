@@ -22,13 +22,13 @@ I don't checkin the **node_modules** folder to this repo, you need run `npm inst
 
 Next, run `npm start` to start a package, and then run `ipfs daemon` to start IPFS Api Server.
 
-###iOS
+### iOS
 
 I don't include Carthage Build folder into version control because of the big size. So you need to run `carthage update --platform iOS` to install all **swift-ipfs-api** frameworks under `IPFSNative/IPFSNative/ios/IPFSiOS/IPFSClient` path.
 
 Then open **IPFSiOS.xcworkspace** using Xcode(I'm using Xcode 9.4.1), choose `IPFSiOS` target and run it.
 
-###Android
+### Android
 
 Open the project using Android Studio and click **Run** button to launch the app.
 
