@@ -43,14 +43,26 @@ Finally open Xcode or Android Studio IDE and click **Run** button to launch the 
 
 ### How to implement it
 
+The main idea is to create independent framework(*iOS*) and modules(*Android*) on native side, which is easy to maintain, migrate and extend.
+
+Following is the iOS project hierarchy:
+
+<img src="Resources/project_iOS.png" width=300 alt="Render" align=center />
+
+I created an **IPFSClient** framework, and add it to the main target called **IPFSiOS**. The main target doesn't need to know how to upload and fetch data from IPFS Api Server, it just cares about the response, and pass it to React Native page(*NativeModule* does it). Using this way, we can easily separate bussiness logic and UI logic, and easy to add more IPFS commands support without affecting other targets, also quite easy when migrating.
+
+Android project has one more module called **nativemodules**(*communicate with IPFSClient*). Because the communication setup between android and react native is more complicated than iOS, which needs more classes such as **UploadFileModule**, **UploadReactPackage**, and **MainApplication**. In this way, we can not only separate **IPFSClient** module, but also separate native service components, which means we can maintain this module as a SDK, and apply it to different projects.
+
+<img src="Resources/project_android.png" width=300 alt="Render" align=center />
 
 
-# Credits:
-Layout engine:
+# Issues I found:
+The Swift and Kotlin IPFS Api Client Library is quite incompleted. For example, the command: `ipfs files ls`, which can list all the files user uploaded to the IPFS Server, but both Swift and Kotlin api don't support this command. This obstruct features implementation on both sides.
 
-* [facebook/yoga](https://github.com/facebook/yoga)
+Also there are big differences between Swfit and Kotlin IPFS Api Library. For instance, Swift library provides `ls` functionality, which can show all files for specific component such as :
 
-In the Stylesheet Mod:
+`ipfs file ls /ipfs/QmQLXHs7K98JNQdWrBB2cQLJahPhmupbDjRuH1b9ibmwVa`
 
-* [yaml/libyaml](https://github.com/yaml/libyaml)
-* [nicklockwood/Expression](https://github.com/nicklockwood/Expression)
+However, there is no such functionality in Android Library.
+
+So finally, I just implemented the common function supported by both channel, that is, `add` and `cat`.
