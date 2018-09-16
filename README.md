@@ -33,7 +33,7 @@ Finally open Xcode or Android Studio IDE and click **Run** button to launch the 
 
 <div style="text-align:center" markdown="1">
 	<img src="Resources/IPFSiOS_before.png" width=300 alt="Render" align=left />
-	<img src="Resources/IPFSiOS_after.png" width=300 alt="Render" align=center />
+	<img src="Resources/IPFSiOS_after.png" width=300 alt="Render" align=right />
 </div>
 
 <br />
