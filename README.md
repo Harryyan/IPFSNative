@@ -32,7 +32,7 @@ Then open **IPFSiOS.xcworkspace** using Xcode(I'm using Xcode 9.4.1), choose `IP
 
 Open the project using Android Studio and click **Run** button to launch the app.
 
->  You can also run `react-native run-ios` or `react-native run-android` to lauch the app after you start IPFS Api Server. However, I don't recommend this way, because you have to specify iOS project path.
+>  You can also run `react-native run-ios` or `react-native run-android` to lauch the app after you start IPFS Api Server. However, I don't recommend this way, because you may need to specify project path.
 
 
 ## ScreenShots
