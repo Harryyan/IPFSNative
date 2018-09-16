@@ -1,4 +1,4 @@
-# IPFSNative [![Swift](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat)](#) [![Kotlin](https://img.shields.io/badge/kotlin-1.2.41-green.svg?style=flat)](#) [![ReactNative](https://img.shields.io/badge/ReactNative-0.57.0-blue.svg?style=flat)](#) [![Platform](https://img.shields.io/badge/platform-iOS | android-lightgrey.svg?style=flat)](#) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
+# IPFSNative [![Swift](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat)](#) [![Kotlin](https://img.shields.io/badge/kotlin-1.2.41-green.svg?style=flat)](#) [![ReactNative](https://img.shields.io/badge/ReactNative-0.57.0-blue.svg?style=flat)](#) [![Platform](https://img.shields.io/badge/platform-iOS|android-lightgrey.svg?style=flat)](#) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 <img src="Resources/logo.png" width=300 alt="Render" align=right />
 
